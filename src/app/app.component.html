@@ -1,0 +1,57 @@
+<div class="main-section">
+  <nav>
+    <div class="row">
+      <div class="col-sm-12 col-md-3 p-top-sm-5 p-bottom-sm-5">
+        <h3 class="text-success">[G6System]</h3>
+      </div>
+      <div class="col-sm-12 col-md-6 p-top-sm-5 p-bottom-sm-5">
+        <div class="form-group has-search">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="search" class="form-control" placeholder="Search" />
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 text-success text-right text-left-sm p-top-sm-5 p-bottom-sm-5 p-right-20">
+        <i class="nav-icon fa fa-bell"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="nav-icon fa fa-user-circle"></i>
+      </div>
+    </div>
+  </nav>
+
+  <main class="row">
+    <div class="hide-sm col-sm-4 col-md-3 col-lg-2 sidebar">
+      <div class="row p-left-10">
+        <div class="col-sm-7">
+          <h5>Projects</h5>
+        </div>
+        <div class="col-sm-3 cursor-pointer" (click)="openModal('add-new-project')">
+          <i class="fa fa-plus"></i>
+        </div>
+      </div>
+      <div class="row p-left-10 p-top-10">
+        <div class="col-sm-12 p-0">
+          <div class="sidebar-content">
+            <p class="cursor-pointer p-0 text-grey" (click)="toggleDropdown()">
+              &nbsp;&nbsp;&nbsp;All <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </p>
+            <div *ngIf="!isHidden" class="dropdown-content">
+              <ul class="list-inline">
+                <li><a class="text-grey" href="">&nbsp;&nbsp;Project 1</a></li>
+                <li><a class="text-grey" href="">&nbsp;&nbsp;Project 1</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 col-md-9 col-lg-10 p-top-10 content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
+
+<jw-modal id="add-new-project">
+  <button class="btn-flat" (click)="closeModal('add-new-project');">X</button>
+  <app-add-project></app-add-project>
+</jw-modal>

@@ -1,0 +1,97 @@
+<main class="row mt-10">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12 col-md-5 parent-middle-flex">
+                <div class="row">
+                    <div class="col-md-5">
+                        <button class="btn-flat task-label bg-info font-16 text-white">IN PROGRESS</button>
+                    </div>
+                    <div class="col-4" style="width : fit-content; font-size: 13px; color: white;">
+                        <div class="bg-grey rounded-circle position-relative"
+                        style="padding: 5px 0.8rem;">
+                            <span>m+</span>
+                            <div class="
+                                bg-success 
+                                position-absolute 
+                                start-0
+                                translate-middle
+                                rounded-circle
+                                py-1 px-2" style="top : 15px; left: -20px;">
+                                <span>AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+                <form>
+                    <table cellpadding="5" cellspacing="0">
+                        <tr>
+                           <th class="text-grey fw-500 text-center">CREATED</th>
+                           <th class="text-grey fw-500 text-center">TIME TRACKED</th>
+                           <th class="text-grey fw-500 text-center">TIME ESTIMATE</th>
+                           <th class="text-grey fw-500 text-center">DUE DATE</th>
+                        </tr>
+                        <tr>
+                           <td>
+                            <div class="form-group p-0">
+                                <input type="text" name="" id="" class="form-control">
+                            </div>
+                           </td>
+                           <td> 
+                                <div class="form-group">
+                                    <input type="text" name="" id="" class="form-control">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="" id="" class="form-control">
+                                </div>
+                            </td>
+                            <td> 
+                                <div class="form-group">
+                                    <input type="text" name="" id="" class="form-control">
+                                </div>
+                            </td>
+                        </tr>
+                     </table>
+                </form>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-sm-12 col-md-6">
+                <label for="wireframe" class="form-label">Wireframe</label>
+                <textarea class="form-control resize-none w-90" id="wireframe" rows="8"></textarea>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="risks" class="form-label">Risks</label>
+                <input type="text" class="form-control" id="risks" />
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <label for="priority" class="form-label">Priority</label>
+                <input type="text" class="form-control" id="priority" />
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-12">
+                <h3>To Do &nbsp;&nbsp;
+                    <span (click)="openSubtaskModal('add-new-sub-task')" class="font-14 text-grey cursor-pointer">
+                        + Add Subtask
+                    </span>
+                </h3>
+                <ul>
+                    <li class="font-16"><i class="fa fa-square text-grey"></i> Main Page Wireframe</li>
+                    <li class="font-16"><i class="fa fa-square text-grey"></i> Main Page Wireframe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<jw-modal id="add-new-sub-task" style="width: 50%;">
+    <button class="btn-flat" (click)="closeModal('add-new-sub-task');">X</button>
+    <add-sub-task (taskData)="onNewSubTaskData($event)"></add-sub-task>
+</jw-modal>
+

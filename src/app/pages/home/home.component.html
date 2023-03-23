@@ -1,0 +1,246 @@
+<div class="row">
+    <div class="col-sm-12 top-row">
+      <div class="row">
+        <div class="col-md-12 col-lg-7">
+          <h2>Project planing &amp; management</h2>
+          <p class="p-left-20">
+            Laudantium, accusantium placeat. Animi in maiores nemo omnis at, commodi est veniam quam! Ipsa laborum
+            quas dignissimos, dolorem consequatur excepturi aperiam optio delectus, cum accusamus
+            <br /><b>Owner: Rachel Miller</b>
+          </p>
+        </div>
+        <div class="col-md-12 col-lg-5 p-right-10 top-row-list">
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <p class="text-grey underline">Team members 
+                <a (click)="openModal('assign-team-member')" class="underline-none text-grey cursor-pointer">
+                  <i class="fa fa-plus"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-sm-12 col-md-8">
+              <ul class="list-group">
+                <li class="list-group-item active" aria-current="true">Team members</li>
+                <li *ngFor="let item of selectedTeamMembers" class="list-group-item">{{item.name}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 task-content-area">
+      <div class="w-100 auto-height">
+        <div class="w-100">
+          <div class="d-flex justify-content-between gap-4 align-items-center"
+            style="font-size: 13px; padding: 0 1rem;">
+            <div class="" style="width : 60%;">
+              <div>
+                <!-- icon and done label here -->
+                <p class="font-16 fw-500"><i class="fa fa-caret-down"></i> DONE</p>
+              </div>
+            </div>
+            <div class="" style="width: 40%; display: flex; justify-content: center;">
+              <div style="width:80%;">
+                <!-- Header that should not be duplicated -->
+                <div class="d-flex justify-content-between align-items-center gap-4">
+                  <p class="fw-500 font-14">Assignee</p>
+                  <p class="fw-500 font-14">Due&nbsp;Date</p>
+                  <p class="fw-500 font-14">Time&nbsp;Estimate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="width: 100%; font-size: 13px;">
+            <div class="d-flex justify-content-between gap-4 align-items-center px-5">
+              <div class="" style="width: 60%;">
+                <p class="font-14"><i class="fa fa-check-circle text-success"></i> Quick&nbsp;Plan</p>
+              </div>
+
+              <div style="width:40%; display: flex; justify-content: center; align-items: center;">
+                <div style="width: 80%;">
+                  <!-- content that can be duplicated -->
+                  <div class="py-1 px-3 d-flex justify-content-between align-items-center gap-4">
+                    <div class="rounded-circle p-1 bg-success text-white">
+                      <span>FM</span>
+                    </div>
+                    <div class="py-1 px-3">
+                      <span class="text-success">2/25/23</span>
+                    </div>
+                    <div class="p-1">
+                      <span>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            3d
+                          </label>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- in progress -->
+            <div class="">
+              <section class=""
+              style="padding: 0 1rem;">
+                <!-- icon here -->
+                <p class="font-16 fw-500"><i class="fa fa-caret-down"></i> IN&nbsp;PROGRESS</p>
+              </section>
+              <section>
+                <div class="d-flex justify-content-between gap-4 align-items-center px-5">
+                  <div class="" style="width: 60%;">
+                    <p class="font-14"><i class="fa fa-square text-success"></i> Wireframes</p>
+                  </div>
+
+                  <div class="task-list-right">
+                    <div class="content">
+                      <!-- content that can be duplicated -->
+                      <div class="px-3 py-1 d-flex justify-content-between align-items-center gap-4">
+                        <div class="rounded-circle p-1 bg-info text-white">
+                          <span>AV</span>
+                        </div>
+                        <div class="py-1 px-3">
+                          <span class="text-danger">2/25/23</span>
+                        </div>
+                        <div class="p-1">
+                          <span>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                                3d
+                              </label>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <div class="d-flex justify-content-between gap-4 align-items-center px-5">
+                  <div class="" style="width: 60%;">
+                    <p class="font-14"><i class="fa fa-square text-success"></i> Create&nbsp;main&nbsp;page</p>
+                  </div>
+                  <div class="task-list-right">
+                    <div class="content">
+                        <!-- content that can be duplicated -->
+                        <div class="px-3 py-1 d-flex justify-content-between align-items-center gap-4">
+                          <div class="rounded-circle p-1 bg-danger text-white">
+                            <span>KM</span>
+                          </div>
+                          <div class="py-1 px-3">
+                            <span>2/25/23</span>
+                          </div>
+                          <div class="p-1">
+                            <span>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  3d
+                                </label>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+
+            <!-- backlog -->
+            <div class="">
+              <section class=""
+              style="padding: 0 1rem;">
+                <!-- icon here -->
+                <p class="font-16 fw-500"><i class="fa fa-caret-down"></i> BACKLOG</p>
+              </section>
+              <section>
+                <div class="d-flex justify-content-between gap-4 align-items-center px-5">
+                  <div class="" style="width: 60%;">
+                    <p class="font-14"><i class="fa fa-square text-grey"></i> Comprehensive&nbsp;Plan</p>
+                  </div>
+
+                  <div class="task-list-right">
+                    <div class="content">
+                      <!-- content that can be duplicated -->
+                      <div class="px-3 py-1 d-flex justify-content-between align-items-center gap-4">
+                        <div class="rounded-circle p-1 bg-success text-white">
+                          <span>KM</span>
+                        </div>
+                        <div class="py-1 px-3">
+                          <span>2/25/23</span>
+                        </div>
+                        <div class="p-1">
+                          <span>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                                3d
+                              </label>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <div class="d-flex justify-content-between gap-4 align-items-center px-5">
+                  <div class="" style="width: 60%;">
+                    <p class="font-14"><i class="fa fa-square text-grey"></i> Final&nbsp;product</p>
+                  </div>
+                  <div class="task-list-right">
+                    <div class="content">
+                        <!-- content that can be duplicated -->
+                        <div class="px-3 py-1 d-flex justify-content-between align-items-center gap-4">
+                          <div class="rounded-circle p-1 bg-danger text-white">
+                            <span>KM</span>
+                          </div>
+                          <div class="py-1 px-3">
+                            <span>2/25/23</span>
+                          </div>
+                          <div class="p-1">
+                            <span>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  3d
+                                </label>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 p-left-20 p-top-10">
+      <a (click)="openModal('add-new-task')" class="underline-none text-grey cursor-pointer">
+        + New Task
+      </a>
+    </div>
+  </div>
+
+<jw-modal id="add-new-task" style="width: 50%;">
+  <button class="btn-flat" (click)="closeModal('add-new-task');">X</button>
+  <add-task (taskData)="onNewTaskData($event)"></add-task>
+</jw-modal>
+
+<jw-modal id="assign-team-member" style="width: 50%;">
+  <button class="btn-flat" (click)="closeModal('assign-team-member');">X</button>
+  <app-assign-team-member (taskData)="assignNewTeamMember($event)"></app-assign-team-member>
+</jw-modal>
